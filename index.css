@@ -1,0 +1,115 @@
+*{margin: 0; padding: 0; list-style: none; text-decoration: none; text-align: center;}
+body{padding-top: 150px; overflow-x: hidden;}
+
+/* 헤더 시작 */
+header{
+    background-color: darkgreen; 
+    position: fixed; top: 0;
+    width: 100%; height: 150px;  
+    color: white;
+}
+header img{
+    width: 75px;
+    margin: 30px;
+    float: left;
+}
+/* dropdown */
+.drop-main, .drop-sub{
+    display: flex;
+    justify-content: end;
+}
+.drop-main > li, .drop-sub > ul > li >a{
+     color: white; font-weight: bold; font-size: 20px;
+}
+.drop-main > li{
+    transform: translateY(40px); font-size: 25px;
+}
+.drop-main > li, .drop-sub ul{width: 18%;}
+.drop-sub{height: 0; overflow: hidden;}
+
+/* hover 이벤트 */
+header:hover{background-color: white}
+header:hover .drop-main > li, .drop-sub > ul >li >a{color: darkgreen;}
+header:hover .drop-main > li {transform: translateY(0); }
+header:hover .drop-main > li::after{
+    content: "";
+    display: block;
+    width: 90px;
+    border-bottom: 1px solid green;
+    margin: 0 auto;
+}
+header:hover .drop-sub{height:auto; overflow: auto;}
+
+/* 헤더 부분은 일단 끝? 
+추가하고 싶은 사항 로고 아이콘 옆에 사이트 이름 박고 싶은데 할 수 있으면 하는 걸로*/
+
+/* 메인 */
+/* 맨처음 Why 시작 */
+.why{
+    background: url(images/man-23838_1280.png) no-repeat 50% 100%/40% 60%;
+    width: 100%;
+    height: 800px;
+    font-size: 30px; color:aliceblue;
+    background-color: gray;
+}
+.why h1{transform: scale(1.8);}
+.why > div{width: 500px; position: absolute;}
+
+/* why 문구 애니메이션 */
+
+.why .w_1{
+    top: 50%; left: 15%;
+    animation: ani1 3s alternate infinite ease-in;
+}
+
+@keyframes ani1 {
+    from{
+        transform: translate(0,0) rotate(-15deg);
+    }
+    to{
+        transform: translate(15px, 15px) rotate(-20deg);
+    }
+}
+
+.why .w_2{
+    top: 40%; left: 40%;
+    animation: ani2 3s alternate infinite ease-in;
+}
+@keyframes ani2 {
+    from{
+        transform: translate(0,0) rotate(0deg);
+    }
+    to{
+        transform: translate(15px, 15px) rotate(5deg);
+    }
+}
+.why .w_3{
+    top: 50%; right: 10%;
+    animation: ani3 3s alternate infinite ease-in;
+}
+@keyframes ani3 {
+    from{
+        transform: translate(0,0) rotate(45deg);
+    }
+    to{
+        transform: translate(15px, 15px) rotate(50deg);
+    }
+}
+
+/* mix 시작 */
+.mix{
+    width: 100%; height: 800px;
+    font-size: 30px; 
+    
+}
+.mix .mix_t{
+    width: 1000px;
+    position: absolute;
+    left: 25%;
+    margin-top: 500px;
+}
+#mainVideo{
+    min-width: 100%; 
+    opacity: 0.5; 
+    position: relative;
+}
