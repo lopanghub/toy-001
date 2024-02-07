@@ -9,7 +9,7 @@
 <body>
     <!-- 헤더 -->
     <header>
-        <img src="images/잡탕밥logo.png" alt="로고" >
+        <img src="images/free-icon-congee-3766315.png" alt="로고" >
         <!-- 드랍다운 -->
     
         <ul class="drop-main">
@@ -56,22 +56,40 @@
 
     <!-- mix는 opacity 0.5인 비디오를 넣고  -->
     <main class="mix">
-        <div class="mix_t">
-            <h1>그냥 다 해보자</h1>
-            <h2>사이트 이름은 다 섞었으니 잡탕밥이 좋겠다</h2>
-        </div>
         <video autoplay muted loop id="mainVideo">
             <source src="images/cooking_-_1498 (720p).mp4" type="video/mp4">
         </video>
+        <div class="mix_t">
+            <span class="mixText"></span><span class="blink">|</span>
+        </div>
+        
     </main>
 
     <!-- 여기는 박스 3개로 간략한 사이트 세부 페이지 소개 -->
     <main class="ri">
         <h1>뇌절 그 자체를 소개합니다</h1>
         <div class="container">
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
+            <div class="contentBox">
+                <img src="images/food.png" alt="">
+                <div class="textBox">
+                    <h2>Food</h2>
+                    <p>잡탕밥의 모든 것</p>
+                </div>
+            </div>
+            <div class="contentBox">
+                <img src="images/game.png" alt="">
+                <div class="textBox">
+                    <h2>Game</h2>
+                    <p>즐겨주세요!!</p>
+                </div>
+            </div>
+            <div class="contentBox">
+                <img src="images/note.png" alt="">
+                <div class="textBox">
+                    <h2>Note</h2>
+                    <p>메모장</p>
+                </div>
+            </div>    
         </div>
     </main>
 
@@ -80,5 +98,22 @@
     <footer>
 
     </footer>
+
+    <!-- 타이핑 스크립트 -->
+    <script>
+        const content = "그냥 다 해보자 \n사이트 이름은 다 섞었으니\n잡탕밥이 좋겠다.";
+        const text = document.querySelector(".mixText");
+        let i = 0;
+
+        function typing(){
+            let txt = content[i++];
+            text.innerHTML += txt=== "\n" ? "<br/>" : txt;
+            if(i > content.length){
+                text.textContent = "";
+                i = 0;
+            }
+        }
+        setInterval(typing, 350)
+    </script>
 </body>
 </html>
