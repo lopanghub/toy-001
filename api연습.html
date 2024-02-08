@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예제</title>
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous">
+    </script>
+</head>
+<body>
+    <h1>api 연습하기</h1>
+    <p></p>
+    <script>
+        $.ajax({
+            method: "GET",
+            url: "https://dapi.kakao.com/v2/search/web",
+            data: {query : "이효리" },
+            headers : {Authorization: "KakaoAK f25fbda2db7d44f870308fe8c6a217cd"}
+        })
+            .done(function( msg ) {
+             console.log(msg.documents[0].title);
+             console.log(msg.documents[0].url);
+             $( "p" ).append( "<strong>"+msg.documents[0].title+"</strong>" );
+             $( "p" ).append( "<span>"+msg.documents[0].url+"</span>" );
+
+        });
+    </script>
+</body>
+</html>

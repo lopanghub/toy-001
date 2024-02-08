@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>잡탕밥-칼로리계산</title>
     <link rel="stylesheet" href="칼로리.css">
+
 </head>
+
 <body>
     <!-- 헤더 -->
     <header>
-        <img src="images/free-icon-congee-3766315.png" alt="로고" >
+        <img src="images/free-icon-congee-3766315.png" alt="로고">
         <!-- 드랍다운 -->
-    
+
         <ul class="drop-main">
             <li>Main</li>
             <li>Food</li>
@@ -23,7 +26,7 @@
                 <li><a href="#">Why?</a></li>
                 <li><a href="#">Mix</a></li>
                 <li><a href="#">뇌절</a></li>
-                
+
             </ul>
             <ul>
                 <li><a href="#">칼로리</a></li>
@@ -40,13 +43,85 @@
                 <li><a href="#">donate</a></li>
             </ul>
         </div>
-    
+
     </header>
 
     <!-- 메인 -->
     <main>
         <h1>칼로리 계산기</h1>
         <p>잡탕밥의 칼로리는?</p>
+
+
+        <section>
+            <!-- 잡탕밥 영양성분표 -->
+            <div class="tableContainer">
+                <table>
+                    <caption>영양 성분표</caption>
+                    <tr class="bor">
+                        <td>1회 제공량</td>
+                        <td class="t_value">일일 필요량(%)</td>
+                    </tr>
+                    <tr>
+                        <td>칼로리 <span>777.44</span></td>
+                        <td class="t_value">39%</td>
+                    </tr>
+                    <tr>
+                        <td>총 지방 <span>20.13g</span></td>
+                        <td class="t_value">67%</td>
+                    </tr>
+
+                    <tr>
+                        <td class="sub"><span>포화 지방 4.07g</span></td>
+                    </tr>
+                    <tr>
+                        <td class="sub"><span>트랜스 지방 0.12g</span></td>
+                    </tr>
+                    <tr>
+                        <td class="sub"><span>단일 불포화지방산 4.9g</span></td>
+                    </tr>
+                    <tr>
+                        <td class="sub"><span>다중 불포화지방산 10.3g</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>콜레스테롤 <span>329.85mg</span></td>
+                        <td class="t_value">110%</td>
+                    </tr>
+                    <tr>
+                        <td>나트륨 <span>0mg</span></td>
+                        <td class="t_value">0%</td>
+                    </tr>
+                    <tr>
+                        <td>총 탄수화물 <span>104.94g</span></td>
+                        <td class="t_value">81%</td>
+                    </tr>
+                    <tr>
+                        <td class="sub"> <span>식이섬유 13.75g</span></td>
+                        <td class="t_value">69%</td>
+                    </tr>
+                    <tr>
+                        <td class="sub"><span>당분 0.48g</span></td>
+                        <td class="t_value">0%</td>
+                    </tr>
+                    <tr>
+                        <td>단백질 <span>44.12g</span></td>
+                        <td class="t_value">80%</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- 그래프 -->
+            <aside class="barContainer">칼로리
+                <div class="progressbar"></div>
+            </aside>
+
+            <!-- 차트 -->
+            <aside class="chartContainer">원형 차트
+                <div class="chart"></div>
+            </aside>
+        </section>
     </main>
+
 </body>
+
 </html>
