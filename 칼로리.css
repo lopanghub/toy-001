@@ -141,11 +141,109 @@ span {
 }
 
 /* 그래프 */
-.progressbar {
+.barHead{
+    display: flex;
+    justify-content: space-between;
+}
+.barContainer span{
+    color: darkgreen;
+    font-size: 0.7em;
+}
+.barCaption{
+    padding-left: 15px;
+    margin-bottom: 20px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    line-height: 1.5;
+    
+}
+.barSmall{
+    font-size: 0.5em;
+    color: gray;
+}
+i{
+    font-size: 0.5em; color :gray;
+}
+
+.bar1{
     width: 100%;
     height: 50px;
-    background: linear-gradient(to right, darkgreen 0 39%, black 39% 100%);
-    font-weight: 600;
-    font-size: .8rem;
-    /* background-color: blueviolet; */
+    background-color: white;
+    position: relative;
+    box-shadow: 0 0 5px 0 gray;
+    margin-bottom: 20px;
+}
+.bar2{
+    width: 39%;
+    height: 50px;
+    background: red;
+    background: linear-gradient(to right , orange, red);
+    position: absolute;
+}
+
+.a_2{
+    width: 80%;
+}
+.a_3{
+    width: 81%;
+}
+.a_4{
+    width: 67%;
+}
+
+/* 원형 차트 */
+.chartCaption{
+    padding-right: 5px;
+    padding-left: 15px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+.chart{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: conic-gradient(orange 0% 77%, yellow 77% 91%, green 91% 96%, blue 96% 98%, gray 98% 100%);
+}
+.chartCenter{
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    top:30px;
+    left: 30px;
+    background-color: white;
+}
+.chartContainer ul{
+    margin-top: 20px;
+}
+.chartContainer li{
+    display: list-item;
+    list-style-type: disc;
+}
+
+.chartContainer ul #orange::marker{
+    color:orange;
+}
+.chartContainer ul #yellow::marker{
+    color:yellow;
+}
+.chartContainer ul #green::marker{
+    color: green;
+}
+.chartContainer ul #blue::marker{
+    color: blue;
+}
+.chartContainer ul #gray::marker{
+    color: gray;
+}
+
+/* 장난질 */
+
+#s1{
+    display: none;
 }
