@@ -1,119 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>잡탕밥</title>
-    <link rel="stylesheet" href="index.css">
-</head>
-<body>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gugi&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <!-- 헤더 -->
     <header>
-        <img src="images/free-icon-congee-3766315.png" alt="로고" >
-        <!-- 드랍다운 -->
-    
-        <ul class="drop-main">
-            <li>Main</li>
-            <li>Food</li>
-            <li>Game</li>
-            <li>Note</li>
+      <div class="logo">
+        <a href="index.html"
+          ><img src="images/free-icon-congee-3766315.png" alt="로고" />
+        </a>
+      </div>
+      <!-- 드랍다운 -->
+
+      <ul class="drop-main">
+        <li>Main</li>
+        <li>Food</li>
+        <li>Game</li>
+        <li>Note</li>
+      </ul>
+      <div class="drop-sub">
+        <ul>
+          <li><a href="index.html">Why?</a></li>
+          <li><a href="#mixA">Mix</a></li>
+          <li><a href="#riA">뇌절</a></li>
         </ul>
-        <div class="drop-sub">
-            <ul>
-                <li><a href="#">Why?</a></li>
-                <li><a href="#">Mix</a></li>
-                <li><a href="#">뇌절</a></li>
-                
-            </ul>
-            <ul>
-                <li><a href="#">칼로리</a></li>
-                <li><a href="#">레시피</a></li>
-                <li><a href="#">맛집</a></li>
-            </ul>
-            <ul>
-                <li><a href="#">mini1</a></li>
-                <li><a href="#">mini2</a></li>
-            </ul>
-            <ul>
-                <li><a href="#">note</a></li>
-                <li><a href="#">link</a></li>
-                <li><a href="#">donate</a></li>
-            </ul>
-        </div>
-    
+        <ul>
+          <li><a href="칼로리.html">칼로리</a></li>
+          <li><a href="레시피.html">레시피</a></li>
+          <li><a href="맛집.html">맛집</a></li>
+        </ul>
+        <ul>
+          <li><a href="mini1.html">mini1</a></li>
+          <li><a href="mini2.html">mini2</a></li>
+        </ul>
+        <ul>
+          <li><a href="note.html">note</a></li>
+          <li><a href="link.html">link</a></li>
+          <li><a href="donate.html">donate</a></li>
+        </ul>
+      </div>
     </header>
 
     <!-- 메인 시작 -->
     <!-- why에는 애니매이션을 넣고 싶다 스크롤을 내리면 천천히 h3이 부분이
     말풍선처럼 나오는걸로 -->
     <main class="why">
-        <h1>Why?</h1>
-        <div class="w_1"><h3>이건 구현 못해</h3></div>
-        <div class="w_2"><h3>저거하면 기한내 다 할 수 있나?</h3></div>
-        <div class="w_3"><h3>이건 이래서 저건 저래서...</h3></div>
-        
+      <h1>Why?</h1>
+      <div class="w_1"><h3>이건 구현 못해</h3></div>
+      <div class="w_2"><h3>저거하면 기한내 다 할 수 있나?</h3></div>
+      <div class="w_3"><h3>이건 이래서 저건 저래서...</h3></div>
     </main>
 
     <!-- mix는 opacity 0.5인 비디오를 넣고  -->
     <main class="mix">
-        <video autoplay muted loop id="mainVideo">
-            <source src="images/cooking_-_1498 (720p).mp4" type="video/mp4">
-        </video>
-        <div class="mix_t">
-            <span class="mixText"></span><span class="blink">|</span>
-        </div>
-        
+      <div id="mixA"></div>
+      <video autoplay muted loop id="mainVideo">
+        <source src="images/cooking_-_1498 (720p).mp4" type="video/mp4" />
+      </video>
+      <div class="mix_t">
+        <span class="mixText"></span><span class="blink">|</span>
+      </div>
     </main>
 
     <!-- 여기는 박스 3개로 간략한 사이트 세부 페이지 소개 -->
     <main class="ri">
-        <h1>뇌절 그 자체를 소개합니다</h1>
-        <div class="container">
-            <div class="contentBox">
-                <img src="images/food.png" alt="">
-                <div class="textBox">
-                    <h2>Food</h2>
-                    <p>잡탕밥의 모든 것</p>
-                </div>
-            </div>
-            <div class="contentBox">
-                <img src="images/game.png" alt="">
-                <div class="textBox">
-                    <h2>Game</h2>
-                    <p>즐겨주세요!!</p>
-                </div>
-            </div>
-            <div class="contentBox">
-                <img src="images/note.png" alt="">
-                <div class="textBox">
-                    <h2>Note</h2>
-                    <p>메모장</p>
-                </div>
-            </div>    
+      <div id="riA"></div>
+      <h1>뇌절 그 자체를 소개합니다</h1>
+      <div class="container">
+        <div class="contentBox">
+          <img src="images/food.png" alt="" />
+          <div class="textBox">
+            <h2>Food</h2>
+            <p>잡탕밥의 모든 것</p>
+          </div>
         </div>
+        <div class="contentBox">
+          <img src="images/game.png" alt="" />
+          <div class="textBox">
+            <h2>Game</h2>
+            <p>즐겨주세요!!</p>
+          </div>
+        </div>
+        <div class="contentBox">
+          <img src="images/note.png" alt="" />
+          <div class="textBox">
+            <h2>Note</h2>
+            <p>메모장</p>
+          </div>
+        </div>
+      </div>
     </main>
 
     <!-- 푸터
     에는 이번엔 ppt 안쓸거니까 개발기간 이나 기타 정보들을 넣는 걸로 -->
-    <footer>
-
-    </footer>
+    <footer></footer>
 
     <!-- 타이핑 스크립트 -->
     <script>
-        const content = "그냥 다 해보자 \n사이트 이름은 다 섞었으니\n잡탕밥이 좋겠다.";
-        const text = document.querySelector(".mixText");
-        let i = 0;
+      const content =
+        "그냥 다 해보자 \n사이트 이름은 다 섞었으니\n잡탕밥이 좋겠다.";
+      const text = document.querySelector(".mixText");
+      let i = 0;
 
-        function typing(){
-            let txt = content[i++];
-            text.innerHTML += txt=== "\n" ? "<br/>" : txt;
-            if(i > content.length){
-                text.textContent = "";
-                i = 0;
-            }
+      function typing() {
+        let txt = content[i++];
+        text.innerHTML += txt === "\n" ? "<br/>" : txt;
+        if (i > content.length) {
+          text.textContent = "";
+          i = 0;
         }
-        setInterval(typing, 350)
+      }
+      setInterval(typing, 350);
     </script>
-</body>
+  </body>
 </html>

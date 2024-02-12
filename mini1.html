@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>잡탕밥 - 가위바위보</title>
+    <link rel="stylesheet" href="mini1.css">
+    <script src="https://kit.fontawesome.com/4ec79785b5.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <!-- 헤더 복붙 -->
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="images/free-icon-congee-3766315.png" alt="로고" />
+            </a>
+        </div>
+        <!-- 드랍다운 -->
+
+        <ul class="drop-main">
+            <li>Main</li>
+            <li>Food</li>
+            <li>Game</li>
+            <li>Note</li>
+        </ul>
+        <div class="drop-sub">
+            <ul>
+                <li><a href="index.html">Why?</a></li>
+                <li><a href="#mixA">Mix</a></li>
+                <li><a href="#riA">뇌절</a></li>
+            </ul>
+            <ul>
+                <li><a href="칼로리.html">칼로리</a></li>
+                <li><a href="레시피.html">레시피</a></li>
+                <li><a href="맛집.html">맛집</a></li>
+            </ul>
+            <ul>
+                <li><a href="mini1.html">mini1</a></li>
+                <li><a href="mini2.html">mini2</a></li>
+            </ul>
+            <ul>
+                <li><a href="note.html">note</a></li>
+                <li><a href="link.html">link</a></li>
+                <li><a href="donate.html">donate</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section class="mainH">
+            <h1>가위바위보</h1>
+        </section>
+
+        <div class="scoreBoard">
+            <div id="user-label" class="badge">user</div>
+            <div id="com-label" class="badge">com</div>
+            <span id="user-score">0</span>:<span id="com-score">0</span>
+        </div>
+
+        <div class="result">
+            <p>바위는 보를 이깁니다 You win! </p>
+        </div>
+
+        <div class="choices">
+            <div class="choice" id="r">
+                <i class="fa-regular fa-hand-back-fist"></i>
+            </div>
+            <div class="choice" id="p">
+                <i class="fa-regular fa-hand"></i>
+            </div>
+            <div class="choice" id="s">
+                <i class="fa-regular fa-hand-scissors"></i>
+            </div>
+        </div>
+
+        <p id="actionMessage">Click on it</p>
+    </main>
+    <script src="mini1.js" charset="UTF-8"></script>
+</body>
+
+</html>
