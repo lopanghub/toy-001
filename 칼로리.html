@@ -282,10 +282,19 @@
     document.getElementById("food").addEventListener("click", change)
 
     function change() {
-      change_p.innerHTML = "짜장면의 칼로리는?"
-      s2.style.display = 'block';
-      s2.style.display = 'flex';
-      s1.style.display = 'none';
+      if (s2.style.display === 'none') {
+        change_p.innerHTML = "짜장면의 칼로리는?"
+        s2.style.display = 'block';
+        s2.style.display = 'flex';
+        s1.style.display = 'none';
+      }
+      else {
+        change_p.innerHTML = "잡탕밥의 칼로리는?"
+
+        s1.style.display = 'block'
+        s1.style.display = 'flex'
+        s2.style.display = 'none'
+      }
     }
   </script>
 </body>
