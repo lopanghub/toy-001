@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    text-align: center;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
+/* 헤더 시작 */
+header {
+    background-color: darkgreen;
+    position: fixed;
+    width: 100%;
+    height: 130px;
+    color: white;
+    z-index: 2;
+}
+
+header img {
+    width: 200px;
+    margin: 30px;
+    float: left;
+}
+
+/* dropdown */
+.drop-main,
+.drop-sub {
+    display: flex;
+    justify-content: end;
+}
+
+.drop-main>li,
+.drop-sub>ul>li>a {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.drop-main>li {
+    transform: translateY(40px);
+    font-size: 25px;
+}
+
+.drop-main>li,
+.drop-sub ul {
+    width: 18%;
+}
+
+.drop-sub {
+    height: 0;
+    overflow: hidden;
+}
+
+/* hover 이벤트 */
+header:hover {
+    background-color: white
+}
+
+header:hover .drop-main>li,
+.drop-sub>ul>li>a {
+    color: darkgreen;
+}
+
+header:hover .drop-main>li {
+    transform: translateY(0);
+}
+
+header:hover .drop-main>li::after {
+    content: "";
+    display: block;
+    width: 90px;
+    border-bottom: 1px solid green;
+    margin: 0 auto;
+}
+
+header:hover .drop-sub {
+    height: auto;
+    overflow: auto;
+}
+
+/* 헤더 끝 항상 시작할때 패딩탑 넣기 */
+main {
+    padding-top: 130px;
+}
+
+.container {
+    display: grid;
+}
+
+table {
+    margin: 20px auto;
+    border-collapse: separate;
+    border-spacing: 5px;
+    table-layout: fixed
+}
+
+td {
+    width: 80px;
+    height: 80px;
+    border: 1px solid gray;
+    box-shadow: inset 0 0 7px 0 gray;
+    font-size: 3.5em;
+}
