@@ -273,7 +273,47 @@ i {
     color: gray;
 }
 
-/* 장난질 */
+/* 짜장면 그래프 */
+
+#s2 .bar2 {
+    width: 40%;
+    height: 50px;
+    background: red;
+    background: linear-gradient(to right, orange, red);
+    position: absolute;
+}
+
+#s2 .a_2 {
+    width: 36%;
+}
+
+#s2 .a_3 {
+    width: 103%;
+}
+
+#s2 .a_4 {
+    width: 68%;
+}
+
+/* 짜장면 차트 */
+
+.chart {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: conic-gradient(orange 0% 72%, yellow 72% 92%, green 92% 95%, blue 95% 98%, gray 98% 100%);
+}
+
+.chartCenter {
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    top: 30px;
+    left: 30px;
+    background-color: white;
+}
 
 #s2 {
     display: none;
