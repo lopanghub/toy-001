@@ -1,47 +1,87 @@
-*{margin: 0; padding: 0; list-style: none; text-decoration: none; text-align: center;}
-body{ overflow-x: hidden; }
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    text-align: center;
+}
+
+body {
+    overflow-x: hidden;
+}
 
 
 /* 헤더 시작 */
-header{
-    background-color: darkgreen; 
+header {
+    background-color: darkgreen;
     position: fixed;
-    width: 100%; height: 130px;  
+    width: 100%;
+    height: 130px;
     color: white;
     z-index: 2;
 }
-header img{
+
+header img {
     width: 200px;
     margin: 30px;
     float: left;
 }
 
 /* dropdown */
-.drop-main, .drop-sub{
+.drop-main,
+.drop-sub {
     display: flex;
     justify-content: end;
 }
-.drop-main > li, .drop-sub > ul > li >a{
-     color: white; font-weight: bold; font-size: 20px;
+
+.drop-main>li,
+.drop-sub>ul>li>a {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
 }
-.drop-main > li{
-    transform: translateY(40px); font-size: 25px;
+
+.drop-main>li {
+    transform: translateY(40px);
+    font-size: 25px;
 }
-.drop-main > li, .drop-sub ul{width: 18%;}
-.drop-sub{height: 0; overflow: hidden;}
+
+.drop-main>li,
+.drop-sub ul {
+    width: 18%;
+}
+
+.drop-sub {
+    height: 0;
+    overflow: hidden;
+}
 
 /* hover 이벤트 */
-header:hover{background-color: white}
-header:hover .drop-main > li, .drop-sub > ul >li >a{color: darkgreen;}
-header:hover .drop-main > li {transform: translateY(0); }
-header:hover .drop-main > li::after{
+header:hover {
+    background-color: white
+}
+
+header:hover .drop-main>li,
+.drop-sub>ul>li>a {
+    color: darkgreen;
+}
+
+header:hover .drop-main>li {
+    transform: translateY(0);
+}
+
+header:hover .drop-main>li::after {
     content: "";
     display: block;
     width: 90px;
     border-bottom: 1px solid green;
     margin: 0 auto;
 }
-header:hover .drop-sub{height:auto; overflow: auto;}
+
+header:hover .drop-sub {
+    height: auto;
+    overflow: auto;
+}
 
 /* 헤더 부분은 일단 끝? 
 추가하고 싶은 사항 로고 아이콘 옆에 사이트 이름 박고 싶은데 할 수 있으면 하는 걸로*/
@@ -49,119 +89,151 @@ header:hover .drop-sub{height:auto; overflow: auto;}
 /* 메인 */
 /* 맨처음 Why 시작 */
 
-.why{
+.why {
     padding-top: 150px;
     background: url(images/man-23838_1280.png) no-repeat 50% 100%/40% 60%;
     width: 100%;
     height: 800px;
-    font-size: 30px; color:aliceblue;
+    font-size: 30px;
+    color: aliceblue;
     background-color: gray;
 }
-.why h1{transform: scale(1.8);}
-.why > div{width: 500px; position: absolute;}
+
+.why h1 {
+    transform: scale(1.8);
+}
+
+.why>div {
+    width: 500px;
+    position: absolute;
+}
 
 /* why 문구 애니메이션 */
 
-.why .w_1{
-    top: 50%; left: 15%;
+.why .w_1 {
+    top: 50%;
+    left: 15%;
     animation: ani1 3s alternate infinite ease-in;
 }
 
 @keyframes ani1 {
-    from{
-        transform: translate(0,0) rotate(-15deg);
+    from {
+        transform: translate(0, 0) rotate(-15deg);
     }
-    to{
+
+    to {
         transform: translate(15px, 15px) rotate(-20deg);
     }
 }
 
-.why .w_2{
-    top: 40%; left: 40%;
+.why .w_2 {
+    top: 40%;
+    left: 40%;
     animation: ani2 3s alternate infinite ease-in;
 }
+
 @keyframes ani2 {
-    from{
-        transform: translate(0,0) rotate(0deg);
+    from {
+        transform: translate(0, 0) rotate(0deg);
     }
-    to{
+
+    to {
         transform: translate(15px, 15px) rotate(5deg);
     }
 }
-.why .w_3{
-    top: 50%; right: 10%;
+
+.why .w_3 {
+    top: 50%;
+    right: 10%;
     animation: ani3 3s alternate infinite ease-in;
 }
+
 @keyframes ani3 {
-    from{
-        transform: translate(0,0) rotate(45deg);
+    from {
+        transform: translate(0, 0) rotate(45deg);
     }
-    to{
+
+    to {
         transform: translate(15px, 15px) rotate(50deg);
     }
 }
 
 /* mix 시작 */
-.mix{
-    width: 100%; height: 1100px;    
+.mix {
+    width: 100%;
+    height: 1100px;
 }
 
-#mainVideo{
-    min-width: 100%; height: 1100px;
-    opacity: 0.5; 
+#mainVideo {
+    min-width: 100%;
+    height: 1100px;
+    opacity: 0.5;
     position: relative;
 }
-.mix_t{
+
+.mix_t {
     width: 100%;
-    position: absolute; 
+    position: absolute;
     bottom: -500px;
     font-size: 50px;
     text-align: center;
     font-weight: bold;
 }
-.blink{
+
+.blink {
     animation: blink 0.5s infinite;
     font-size: 50px;
 }
+
 @keyframes blink {
-    to{
+    to {
         opacity: 0;
     }
 }
+
 /* 뇌절부분 */
-.ri{
-    width: 100%; height: 100vh;
-    background-color: aliceblue; 
+.ri {
+    width: 100%;
+    height: 100vh;
+    background-color: aliceblue;
     padding-top: 10%;
     font-size: 25px;
 }
-.ri h1{
+
+.ri h1 {
     line-height: 8;
 }
-.container{
+
+.container {
     margin: 20 auto;
-    display: flex; justify-content: center; 
+    display: flex;
+    justify-content: center;
 }
-.ri img{
-    width: 300px; height: 250px;
+
+.ri img {
+    width: 300px;
+    height: 250px;
     padding: 30px;
 }
-.contentBox{
-    margin: 30px; 
+
+.contentBox {
+    margin: 30px;
     box-shadow: 0 0 7px 0 gray;
     transition: 0.5s;
 }
-.contentBox .textBox{
+
+.contentBox .textBox {
     background-color: rgba(204, 140, 56, 0.719);
     line-height: 2;
 }
+
 /* 호버 시 이벤트 */
-.contentBox:hover{
+.contentBox:hover {
     box-shadow: 5px 5px 7px 5px gray;
-    transform: translate(-5px,-5px);
+    transform: translate(-5px, -5px);
 }
 
-.contentBox:hover > .textBox{
+.contentBox:hover>.textBox {
     color: white;
     background-color: blue;
 }

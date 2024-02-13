@@ -11,45 +11,76 @@ body {
 }
 
 /* 헤더 시작 */
-header{
-    background-color: darkgreen; 
+header {
+    background-color: darkgreen;
     position: fixed;
-    width: 100%; height: 130px;  
+    width: 100%;
+    height: 130px;
     color: white;
     z-index: 2;
 }
-header img{
+
+header img {
     width: 200px;
     margin: 30px;
     float: left;
 }
 
 /* dropdown */
-.drop-main, .drop-sub{
+.drop-main,
+.drop-sub {
     display: flex;
     justify-content: end;
 }
-.drop-main > li, .drop-sub > ul > li >a{
-     color: white; font-weight: bold; font-size: 20px;
+
+.drop-main>li,
+.drop-sub>ul>li>a {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
 }
-.drop-main > li{
-    transform: translateY(40px); font-size: 25px;
+
+.drop-main>li {
+    transform: translateY(40px);
+    font-size: 25px;
 }
-.drop-main > li, .drop-sub ul{width: 18%;}
-.drop-sub{height: 0; overflow: hidden;}
+
+.drop-main>li,
+.drop-sub ul {
+    width: 18%;
+}
+
+.drop-sub {
+    height: 0;
+    overflow: hidden;
+}
 
 /* hover 이벤트 */
-header:hover{background-color: white}
-header:hover .drop-main > li, .drop-sub > ul >li >a{color: darkgreen;}
-header:hover .drop-main > li {transform: translateY(0); }
-header:hover .drop-main > li::after{
+header:hover {
+    background-color: white
+}
+
+header:hover .drop-main>li,
+.drop-sub>ul>li>a {
+    color: darkgreen;
+}
+
+header:hover .drop-main>li {
+    transform: translateY(0);
+}
+
+header:hover .drop-main>li::after {
     content: "";
     display: block;
     width: 90px;
     border-bottom: 1px solid green;
     margin: 0 auto;
 }
-header:hover .drop-sub{height:auto; overflow: auto;}
+
+header:hover .drop-sub {
+    height: auto;
+    overflow: auto;
+}
 
 
 /* 메인 */
@@ -62,6 +93,15 @@ main {
 section {
     display: flex;
     justify-content: space-around;
+}
+
+
+main h1 {
+    margin-bottom: 30px;
+}
+
+main>p {
+    margin-bottom: 30px;
 }
 
 /* 영양 성분표 */
@@ -98,6 +138,10 @@ tr {
     border-bottom: 10px solid gray;
 }
 
+td {
+    text-align: left;
+}
+
 span {
     color: gray;
     font-weight: 400;
@@ -109,32 +153,37 @@ span {
 }
 
 /* 그래프 */
-.barHead{
+.barHead {
     display: flex;
     justify-content: space-between;
 }
-.barContainer span{
+
+.barContainer span {
     color: darkgreen;
     font-size: 0.7em;
 }
-.barCaption{
+
+.barCaption {
     padding-left: 15px;
     margin-bottom: 20px;
     background-color: black;
     color: white;
     border-radius: 10px;
     line-height: 1.5;
-    
+
 }
-.barSmall{
+
+.barSmall {
     font-size: 0.5em;
     color: gray;
 }
-i{
-    font-size: 0.5em; color :gray;
+
+i {
+    font-size: 0.5em;
+    color: gray;
 }
 
-.bar1{
+.bar1 {
     width: 100%;
     height: 50px;
     background-color: white;
@@ -142,26 +191,29 @@ i{
     box-shadow: 0 0 5px 0 gray;
     margin-bottom: 20px;
 }
-.bar2{
+
+.bar2 {
     width: 39%;
     height: 50px;
     background: red;
-    background: linear-gradient(to right , orange, red);
+    background: linear-gradient(to right, orange, red);
     position: absolute;
 }
 
-.a_2{
+.a_2 {
     width: 80%;
 }
-.a_3{
+
+.a_3 {
     width: 81%;
 }
-.a_4{
+
+.a_4 {
     width: 67%;
 }
 
 /* 원형 차트 */
-.chartCaption{
+.chartCaption {
     padding-right: 5px;
     padding-left: 15px;
     background-color: black;
@@ -170,48 +222,59 @@ i{
     line-height: 1.5;
     margin-bottom: 30px;
 }
-.chart{
+
+
+
+.chart {
     position: relative;
     width: 300px;
     height: 300px;
     border-radius: 50%;
     background: conic-gradient(orange 0% 77%, yellow 77% 91%, green 91% 96%, blue 96% 98%, gray 98% 100%);
 }
-.chartCenter{
+
+.chartCenter {
     position: absolute;
     width: 240px;
     height: 240px;
     border-radius: 50%;
-    top:30px;
+    top: 30px;
     left: 30px;
     background-color: white;
 }
-.chartContainer ul{
+
+.chartContainer ul {
     margin-top: 20px;
 }
-.chartContainer li{
+
+.chartContainer li {
     display: list-item;
     list-style-type: disc;
+    text-align: left;
 }
 
-.chartContainer ul #orange::marker{
-    color:orange;
+.chartContainer ul #orange::marker {
+    color: orange;
 }
-.chartContainer ul #yellow::marker{
-    color:yellow;
+
+.chartContainer ul #yellow::marker {
+    color: yellow;
 }
-.chartContainer ul #green::marker{
+
+.chartContainer ul #green::marker {
     color: green;
 }
-.chartContainer ul #blue::marker{
+
+.chartContainer ul #blue::marker {
     color: blue;
 }
-.chartContainer ul #gray::marker{
+
+.chartContainer ul #gray::marker {
     color: gray;
 }
 
 /* 장난질 */
 
-#s1{
+#s2 {
     display: none;
 }

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>잡탕밥-리뷰</title>
+    <link rel="stylesheet" href="review.css">
+</head>
+
+<body>
+    <!-- 헤더 복붙 -->
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="images/MergedImages.png" alt="로고" />
+            </a>
+        </div>
+        <!-- 드랍다운 -->
+
+        <ul class="drop-main">
+            <li>Main</li>
+            <li>Food</li>
+            <li>Game</li>
+            <li>Note</li>
+        </ul>
+        <div class="drop-sub">
+            <ul>
+                <li><a href="index.html">Why?</a></li>
+                <li><a href="#mixA">Mix</a></li>
+                <li><a href="#riA">뇌절</a></li>
+            </ul>
+            <ul>
+                <li><a href="칼로리.html">칼로리</a></li>
+                <li><a href="레시피.html">레시피</a></li>
+                <li><a href="맛집.html">맛집</a></li>
+            </ul>
+            <ul>
+                <li><a href="mini1.html">mini1</a></li>
+                <li><a href="mini2.html">mini2</a></li>
+            </ul>
+            <ul>
+                <li><a href="review.html">review</a></li>
+                <li><a href="link.html">link</a></li>
+                <li><a href="donate.html">donate</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- 메인 컨텐츠 -->
+    <main>
+        <h1>문제 및 해결</h1>
+        <section>
+            <div>
+                <p><strong>1. translate과 rotation 동시 사용 </strong><br>
+                    div에 rotation을 넣고 translate을 넣으니 rotation이 적용 안되는 문제가 있었다. <br>
+                    <i>해결법은 translate 옆에 rotation을 넣어서 해결</i>
+                </p>
+                <img src="images/해결1.png" alt="">
+                <img src="images/문제1.png" alt="">
+                <img src="images/문제1 수정.png" alt="">
+            </div>
+
+            <div>
+                <aside>
+                    <p><strong>2. 비디오 배경 문제</strong><br>
+                        백그라운드를 비디오 태그로 대체 했더니 다음과 같은 문제가 발생
+                    </p>
+                    <ol>
+                        <li> fixed로 고정시킨 헤더가 비디오 밑에 파묻히는 현상</li>
+                        <li> 클릭시 움짤이 정지됨</li>
+                        <li> 비디오 위의 글자가 반투명하게 나옴 </li>
+                    </ol>
+                </aside>
+                <div class="screen">
+                    <img src="images/문제2-1.png" alt="">
+                    <img src="images/문제 2-2.png" alt="">
+                </div>
+            </div>
+            <div id="sol2">
+                <h4>해결 방안</h4>
+                <ol>
+                    <li><i>헤더에 z-index 부여</i></li>
+                    <li><i>video 속성 중 controls 제거</i></li>
+                </ol>
+            </div>
+
+            <div>
+                <p><strong>3. 그래프 바 구현 </strong><br>
+                    2개의 div를 만들고 하나는 width 100% <br>다른 하나는 수치%만큼의 width을 주고<br>
+                    겹치는 것으로 구현하러 했으나 겹쳐지지 않는 문제</p>
+                <div class="screen">
+                    <img src="images/오답3.png" alt="">
+                </div>
+            </div>
+
+            <div id="sol3">
+                <h4>해결 방안</h4>
+                <p><i>barhead에 position:relative 를 주는게 아닌<br>
+                        우측처럼 부모 자식으로 묶고 width 100%를 줄 div에 주는 것으로 해결</i></p>
+                <div class="screen">
+                    <img src="images/해결3.png" alt="">
+                </div>
+            </div>
+
+            <div class="sol4">
+                <p><strong>4. list style : none 상태에서 list style 추가시 추가 안됨 </strong><br>
+                    <i>display: list-item; <br>
+                        list-style-type:을 넣어서 해결 </i>
+                </p>
+                <div class="screen">
+                    <img src="images/해결4.png" alt="">
+                    <img src="images/해결4 차트.png" alt="">
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
