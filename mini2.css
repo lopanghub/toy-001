@@ -89,11 +89,21 @@ main {
 }
 
 .container {
+    margin: 20px auto;
     display: grid;
+    grid-template-columns: 1fr 700px 1fr;
+}
+
+aside {
+    border: 1px solid;
+    width: 300px;
+    height: 500px;
+    justify-self: end;
+    align-self: center;
 }
 
 table {
-    margin: 20px auto;
+    margin: 0 auto;
     border-collapse: separate;
     border-spacing: 5px;
     table-layout: fixed

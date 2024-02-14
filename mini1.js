@@ -21,7 +21,7 @@ function convert(letter) {
 }
 
 function win(userChoice, computerChoice){
-    const smallUserWord = "유저".fontsize(3).sub();
+    const smallUserWord = "유저".fontsize(3).sub(); 
     const smallComWord = "컴".fontsize(3).sub();
     const userChoice_div = document.getElementById(userChoice)
     userScore++;
