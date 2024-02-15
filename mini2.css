@@ -94,11 +94,18 @@ main {
     grid-template-columns: 1fr 700px 1fr;
 }
 
+/* 양쪽 끝 사이드박스 */
 aside {
     border: 1px solid;
     width: 300px;
     height: 500px;
+    margin: 0 20px;
     justify-self: end;
+    align-self: center;
+}
+
+.right-side {
+    justify-self: start;
     align-self: center;
 }
 
