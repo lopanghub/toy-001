@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Example</title>
+    <style>
+        td {
+            border: 1px solid black;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <table id="myTable">
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+        </tr>
+    </table>
+
+    <script>
+        let table = document.getElementById('myTable');
+
+        table.addEventListener('click', function (event) {
+            let clickedCell = event.target;
+
+            // rowIndex와 cellIndex를 사용하여 현재 클릭된 셀의 위치를 가져옴
+            let row = clickedCell.parentNode.rowIndex;
+            let col = clickedCell.cellIndex;
+
+            // 주변의 상하좌우 셀에 접근하여 내용 확인
+            let leftCell = col > 0 ? table.rows[row].cells[col - 1] : null;
+            let rightCell = col < table.rows[row].cells.length - 1 ? table.rows[row].cells[col + 1] : null;
+            let topCell = row > 0 ? table.rows[row - 1].cells[col] : null;
+            let bottomCell = row < table.rows.length - 1 ? table.rows[row + 1].cells[col] : null;
+
+            console.log('Left Cell:', leftCell ? leftCell.innerHTML : 'N/A');
+            console.log('Right Cell:', rightCell ? rightCell.innerHTML : 'N/A');
+            console.log('Top Cell:', topCell ? topCell.innerHTML : 'N/A');
+            console.log('Bottom Cell:', bottomCell ? bottomCell.innerHTML : 'N/A');
+        });
+    </script>
+</body>
+
+</html>

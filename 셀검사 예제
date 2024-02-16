@@ -1,0 +1,47 @@
+let tableData = document.querySelectorAll('td');
+
+tableData.forEach((cell, index) => {
+    cell.addEventListener('click', () => {
+        if (!cell.innerHTML) {
+            checkAndMarkAdjacentCells(index);
+        }
+    });
+});
+
+function checkAndMarkAdjacentCells(cellIndex) {
+    let rows = document.getElementsByTagName('tr');
+    let totalRows = rows.length;
+    let totalColumns = rows[0].children.length;
+
+    let rowIndex = Math.floor(cellIndex / totalColumns);
+    let columnIndex = cellIndex % totalColumns;
+
+    // 주변 셀의 상대적 위치 배열
+    let directions = [
+        { row: -1, col: -1 }, // 왼쪽 위 대각선
+        { row: -1, col: 0 },  // 위쪽
+        { row: -1, col: 1 },  // 오른쪽 위 대각선
+        { row: 0, col: -1 },  // 왼쪽
+        { row: 0, col: 1 },   // 오른쪽
+        { row: 1, col: -1 },  // 왼쪽 아래 대각선
+        { row: 1, col: 0 },   // 아래쪽
+        { row: 1, col: 1 }    // 오른쪽 아래 대각선
+    ];
+
+    for (let dir of directions) {
+        let newRow = rowIndex + dir.row;
+        let newCol = columnIndex + dir.col;
+
+        // 주변 셀이 테이블 범위 안에 있는지 확인
+        if (newRow >= 0 && newRow < totalRows && newCol >= 0 && newCol < totalColumns) {
+            let adjacentCellIndex = newRow * totalColumns + newCol;
+            let adjacentCell = tableData[adjacentCellIndex];
+
+            // 주변 셀이 비어있으면 'O'로 표시
+            if (!adjacentCell.innerHTML) {
+                adjacentCell.innerHTML = 'O';
+            }
+        }
+    }
+}
+
