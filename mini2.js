@@ -18,7 +18,7 @@ function rotate(e) {
         }
         i++;
 
-        checkAndMarkCells(e.target);
+        
     }
 }
 
@@ -26,7 +26,7 @@ function rotate(e) {
 // 다른 값이면 console.log 값을 출력하는 함수 만들어줘
 
 
-function checkAndMarkCells(clickedCell) {
+function markEmptyCells(clickedCell) {
     let rowIndex = clickedCell.parentElement.rowIndex;
     let columnIndex = clickedCell.cellIndex;
 
@@ -43,22 +43,26 @@ function checkAndMarkCells(clickedCell) {
     ];
 
     for (let dir of directions) {
-        let newRow = rowIndex + dir.row;
-        let newCol = columnIndex + dir.col;
+        let currentRow = rowIndex + dir.row;
+        let currentCol = columnIndex + dir.col;
 
-        // 주변 셀이 테이블 범위 안에 있는지 확인
-        if (newRow >= 0 && newRow < 8 && newCol >= 0 && newCol < 8) {
-            let adjacentCell = tableData[newRow * 8 + newCol];
+        while (currentRow >= 0 && currentRow < 8 && currentCol >= 0 && currentCol < 8) {
+            let currentCell = tableData[currentRow * 8 + currentCol];
 
-         
-         
-            // 주변 셀이 다른 값이면 출력
-            if (!adjacentCell.innerHTML || adjacentCell.innerHTML !== clickedCell.innerHTML) {
-                console.log(`Clicked cell: (${rowIndex}, ${columnIndex}), Surrounding cell: (${newRow}, ${newCol}), Value: ${adjacentCell.innerHTML}`);
+            if (!currentCell.innerHTML || currentCell.innerHTML !== clickedCell.innerHTML) {
+                currentCell.innerHTML = 'v'; // Mark as visited or whatever symbol you prefer
+            } else {
+                break; // Stop marking when a cell with the same color is encountered
             }
+
+            currentRow += dir.row;
+            currentCol += dir.col;
+        }
     }
-   }
 }
 
 // 자 함수를 새로 짜보자 우린 클릭시 checkAndMarkCells 함수가 발동하게 했는데
 // 난 이걸 클릭하기 전에 이미 출력이 된 상태를 원해 
+// 정확히는 주변 셀을 검색해서 다른 색의 돌을 탐지하면 예를 들면 row : 0 col:-1 에서 
+// 흰돌이 있으면 같은 방향으로 row :0 col:-2, row: 0 col : -3, 으로 흰돌이면 계속 검색
+// row 0 col -4 에서 빈칸이면 그곳에 'v'표시를 남기고 싶어
