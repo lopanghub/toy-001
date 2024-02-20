@@ -49,9 +49,12 @@
   <!-- 메인 -->
   <main>
     <h1>칼로리 계산기</h1>
-    <p id="food">잡탕밥의 칼로리는?</p>
+    <!-- data-target 사용 -->
+    <button class="tab-button active" data-target="jumbledRice">잡탕밥</button>
+    <button class="tab-button" data-target="jajangMyeon">짜장면</button>
+    <button class="tab-button">짬뽕</button>
 
-    <section id="s1">
+    <section id="jumbledRice">
       <!-- 잡탕밥 영양성분표 -->
       <div class="tableContainer">
         <table>
@@ -162,7 +165,7 @@
       </aside>
     </section>
 
-    <section id="s2">
+    <section id="jajangMyeon">
       <!-- 짜장면 영양성분표 -->
       <div class="tableContainer">
         <table>
@@ -275,26 +278,33 @@
   </main>
 
   <script>
-    const s1 = document.getElementById("s1");
-    const s2 = document.getElementById("s2");
-    const change_p = document.querySelector("main > p")
+    
+    const tabBtns = document.querySelectorAll('.tab-button');
 
-    document.getElementById("food").addEventListener("click", change)
+    function changeTab(secNum) {
+      const secContents = document.querySelectorAll('section')
+      for (let content of secContents) {
+        content.style.display = 'none'
+      }
+      for (let button of tabBtns) {
+        button.classList.remove('active')
+      }
 
-    function change() {
-      if (s2.style.display === 'none') {
-        change_p.innerHTML = "짜장면의 칼로리는?"
-        s2.style.display = 'block';
-        s2.style.display = 'flex';
-        s1.style.display = 'none';
-      }
-      else {
-        change_p.innerHTML = "잡탕밥의 칼로리는?"
-        s1.style.display = 'block'
-        s1.style.display = 'flex'
-        s2.style.display = 'none'
-      }
+      document.getElementById(secNum).style.display = 'block';
+      document.getElementById(secNum).style.display = 'flex';
     }
+    // 각 버튼마다 클릭이벤트 따로 부여
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', function () {
+        const secNum = this.getAttribute('data-target');
+        changeTab(secNum)
+        this.classList.add('active')
+      })
+    })
+
+    changeTab('jumbledRice');
+
+
   </script>
 </body>
 

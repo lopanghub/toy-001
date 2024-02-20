@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>잡탕밥-칼로리계산</title>
+    <link rel="stylesheet" href="칼로리.css" />
+</head>
+
+<body>
+    <!-- 헤더 -->
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="images/MergedImages.png" alt="로고" />
+            </a>
+        </div>
+        <!-- 드랍다운 -->
+
+        <ul class="drop-main">
+            <li>Main</li>
+            <li>Food</li>
+            <li>Game</li>
+            <li>Note</li>
+        </ul>
+        <div class="drop-sub">
+            <ul>
+                <li><a href="index.html">Why?</a></li>
+                <li><a href="#mixA">Mix</a></li>
+                <li><a href="#riA">뇌절</a></li>
+            </ul>
+            <ul>
+                <li><a href="칼로리.html">칼로리</a></li>
+                <li><a href="레시피.html">레시피</a></li>
+                <li><a href="맛집.html">맛집</a></li>
+            </ul>
+            <ul>
+                <li><a href="mini1.html">mini1</a></li>
+                <li><a href="mini2.html">mini2</a></li>
+            </ul>
+            <ul>
+                <li><a href="review.html">review</a></li>
+                <li><a href="link.html">link</a></li>
+                <li><a href="donate.html">donate</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- 메인 -->
+    <main>
+        <h1>칼로리 계산기</h1>
+        <button class="tab-button active" onclick="changeTab(event, 'jumbledRice')">잡탕밥</button>
+        <button class="tab-button" onclick="changeTab(event, 'jajangMyeon')">짜장면</button>
+        <button class="tab-button">짬뽕</button>
+
+        <section id="jumbledRice">
+            <!-- 잡탕밥 영양성분표 -->
+            <div class="tableContainer">
+                <table>
+                    <caption>
+                        영양 성분표
+                    </caption>
+                    <tr class="bor">
+                        <td>1회 제공량</td>
+                        <td class="t_value">일일 필요량(%)</td>
+                    </tr>
+                    <tr>
+                        <td>칼로리 <span>777.44</span></td>
+                        <td class="t_value">39%</td>
+                    </tr>
+                    <tr>
+                        <td>총 지방 <span>20.13g</span></td>
+                        <td class="t_value">67%</td>
+                    </tr>
+
+                    <tr>
+                        <td class="sub"><span>포화 지방 4.07g</span></td>
+                    </tr>
+                    <tr>
+                        <td class="sub"><span>트랜스 지방 0.12g</span></td>
+                    </tr>
+                    <tr>
+                        <td class="sub"><span>단일 불포화지방산 4.9g</span></td>
+                    </tr>
+                    <tr>
+                        <td class="sub"><span>다중 불포화지방산 10.3g</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>콜레스테롤 <span>329.85mg</span></td>
+                        <td class="t_value">110%</td>
+                    </tr>
+                    <tr>
+                        <td>나트륨 <span>0mg</span></td>
+                        <td class="t_value">0%</td>
+                    </tr>
+                    <tr>
+                        <td>총 탄수화물 <span>104.94g</span></td>
+                        <td class="t_value">81%</td>
+                    </tr>
+                    <tr>
+                        <td class="sub"><span>식이섬유 13.75g</span></td>
+                        <td class="t_value">69%</td>
+                    </tr>
+                    <tr>
+                        <td class="sub"><span>당분 0.48g</span></td>
+                        <td class="t_value">0%</td>
+                    </tr>
+                    <tr>
+                        <td>단백질 <span>44.12g</span></td>
+                        <td class="t_value">80%</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- 그래프 -->
+            <aside class="barContainer">
+
+                <div class="barCaption">칼로리와 3대 영양소</div>
+                <div class="barHead">
+                    <div><strong>칼로리</strong><span>777.44kcal</span></div>
+                    <div><i>일일 필요량의</i> <span>39%</span></div>
+                </div>
+                <div class="bar1">
+                    <div class="bar2 a_1"></div>
+                </div>
+
+                <div class="barHead">
+                    <div><strong>단백질</strong><span>44.12g</span></div>
+                    <div><i>일일 권장량의</i> <span>80%</span></div>
+                </div>
+                <div class="bar1">
+                    <div class="bar2 a_2"></div>
+                </div>
+
+                <div class="barHead">
+                    <div><strong>탄수화물</strong><span>104.94g</span></div>
+                    <div><i>일일 권장량의</i> <span>81%</span></div>
+                </div>
+                <div class="bar1">
+                    <div class="bar2 a_3"></div>
+                </div>
+
+                <div class="barHead">
+                    <div><strong>지방</strong><span>20.13g</span></div>
+                    <div><i>일일 상한량의</i> <span>67%</span></div>
+                </div>
+                <div class="bar1">
+                    <div class="bar2 a_4"></div>
+                </div>
+            </aside>
+
+            <!-- 차트 -->
+            <aside class="chartContainer">
+                <div class="chartCaption">1회 제공량 당 수분과 영양소 비율</div>
+                <div class="chart"><span class="chartCenter"></span></div>
+                <ul>
+                    <li id="orange">77% 수분</li>
+                    <li id="yellow">14% 탄수화물</li>
+                    <li id="green">5% 단백질</li>
+                    <li id="blue">2% 지방</li>
+                    <li id="gray">2% 기타</li>
+                </ul>
+            </aside>
+        </section>
+
+        <section id="jajangMyeon">
+            <!-- 짜장면 영양성분표 -->
+            <div class="tableContainer">
+                <table>
+                    <caption>
+                        영양 성분표
+                    </caption>
+                    <tr class="bor">
+                        <td>1회 제공량</td>
+                        <td class="t_value">일일 필요량(%)</td>
+                    </tr>
+                    <tr>
+                        <td>칼로리 <span>796.5</span></td>
+                        <td class="t_value">40%</td>
+                    </tr>
+                    <tr>
+                        <td>총 지방 <span>20.32g</span></td>
+                        <td class="t_value">68%</td>
+                    </tr>
+
+                    <tr>
+                        <td class="sub"><span>포화 지방 8.52g</span></td>
+                    </tr>
+                    <tr>
+                        <td class="sub"><span>트랜스 지방 0.17g</span></td>
+                    </tr>
+                    <tr>
+                        <td class="sub"><span>단일 불포화지방산 10.2g</span></td>
+                    </tr>
+                    <tr>
+                        <td class="sub"><span>다중 불포화지방산 10.6g</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>콜레스테롤 <span>10.76mg</span></td>
+                        <td class="t_value">4%</td>
+                    </tr>
+                    <tr>
+                        <td>나트륨 <span>0mg</span></td>
+                        <td class="t_value">0%</td>
+                    </tr>
+                    <tr>
+                        <td>총 탄수화물 <span>133.63g</span></td>
+                        <td class="t_value">103%</td>
+                    </tr>
+                    <tr>
+                        <td class="sub"><span>식이섬유 21.75g</span></td>
+                        <td class="t_value">109%</td>
+                    </tr>
+                    <tr>
+                        <td class="sub"><span>당분 7.8g</span></td>
+                        <td class="t_value">4%</td>
+                    </tr>
+                    <tr>
+                        <td>단백질 <span>19.77g</span></td>
+                        <td class="t_value">36%</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- 그래프 -->
+            <aside class="barContainer">
+
+                <div class="barCaption">칼로리와 3대 영양소</div>
+                <div class="barHead">
+                    <div><strong>칼로리</strong><span>796.5kcal</span></div>
+                    <div><i>일일 필요량의</i> <span>40%</span></div>
+                </div>
+                <div class="bar1">
+                    <div class="bar2 a_1"></div>
+                </div>
+
+                <div class="barHead">
+                    <div><strong>단백질</strong><span>19.77g</span></div>
+                    <div><i>일일 권장량의</i> <span>36%</span></div>
+                </div>
+                <div class="bar1">
+                    <div class="bar2 a_2"></div>
+                </div>
+
+                <div class="barHead">
+                    <div><strong>탄수화물</strong><span>133.63g</span></div>
+                    <div><i>일일 권장량의</i> <span>103%</span></div>
+                </div>
+                <div class="bar1">
+                    <div class="bar2 a_3"></div>
+                </div>
+
+                <div class="barHead">
+                    <div><strong>지방</strong><span>20.32g</span></div>
+                    <div><i>일일 상한량의</i> <span>68%</span></div>
+                </div>
+                <div class="bar1">
+                    <div class="bar2 a_4"></div>
+                </div>
+            </aside>
+
+            <!-- 차트 -->
+            <aside class="chartContainer">
+                <div class="chartCaption">1회 제공량 당 수분과 영양소 비율</div>
+                <div class="chart"><span class="chartCenter"></span></div>
+                <ul>
+                    <li id="orange">72% 수분</li>
+                    <li id="yellow">20% 탄수화물</li>
+                    <li id="green">3% 단백질</li>
+                    <li id="blue">3% 지방</li>
+                    <li id="gray">2% 기타</li>
+                </ul>
+            </aside>
+        </section>
+    </main>
+
+    <script>
+        const jumbledRice = document.getElementById("jumbledRice");
+        const jajangMyeon = document.getElementById("jajangMyeon");
+        const tabBtns = document.querySelectorAll('.tab-button');
+
+        function changeTab(event, secNum) {
+            const secContents = document.querySelectorAll('section')
+            for (let content of secContents) {
+                content.style.display = 'none'
+            }
+            for (let button of tabBtns) {
+                button.classList.remove('active')
+            }
+
+            document.getElementById(secNum).style.display = 'block';
+            document.getElementById(secNum).style.display = 'flex';
+            event.currentTarget.classList.add('active')
+        }
+
+        changeTab(event, 'jumbledRice');
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

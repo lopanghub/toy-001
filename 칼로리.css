@@ -153,6 +153,10 @@ span {
 }
 
 /* 그래프 */
+.barContainer {
+    width: 400px;
+}
+
 .barHead {
     display: flex;
     justify-content: space-between;
@@ -213,6 +217,10 @@ i {
 }
 
 /* 원형 차트 */
+.chartContainer {
+    width: 480px;
+}
+
 .chartCaption {
     padding-right: 5px;
     padding-left: 15px;
@@ -275,7 +283,7 @@ i {
 
 /* 짜장면 그래프 */
 
-#s2 .bar2 {
+#jajangMyeon .bar2 {
     width: 40%;
     height: 50px;
     background: red;
@@ -283,15 +291,15 @@ i {
     position: absolute;
 }
 
-#s2 .a_2 {
+#jajangMyeon .a_2 {
     width: 36%;
 }
 
-#s2 .a_3 {
+#jajangMyeon .a_3 {
     width: 103%;
 }
 
-#s2 .a_4 {
+#jajangMyeon .a_4 {
     width: 68%;
 }
 
@@ -313,8 +321,4 @@ i {
     top: 30px;
     left: 30px;
     background-color: white;
-}
-
-#s2 {
-    display: none;
 }
