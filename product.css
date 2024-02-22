@@ -83,14 +83,26 @@ header:hover .drop-sub {
     overflow: auto;
 }
 
+/* /////////////////////////////////////////////////////////// */
 /* 메인 스타트 */
 main {
-    padding-top: 130px;
+    display: grid;
+    grid-template-columns: 3.5fr 1fr;
+    padding-top: 150px;
 }
+
+
 
 main>h2 {
     margin: 20px;
+    padding: 20px;
     text-align: left;
+}
+
+/* 전체 스타일 그리드 */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 /* 각 품목에 관한 스타일*/
@@ -109,11 +121,29 @@ main>h2 {
     text-align: left;
     background-color: black;
     color: white;
+
+}
+
+/* best 표시 span태그 */
+#best01 {
     position: absolute;
     left: 1.5%;
     font-size: 20px;
 }
 
+#best02 {
+    position: absolute;
+    left: 27%;
+    font-size: 20px;
+}
+
+#best03 {
+    position: absolute;
+    left: 53%;
+    font-size: 20px;
+}
+
+/* 상품설명 텍스트 */
 .txt-wrap>a {
     color: black;
     text-decoration: none;
@@ -125,4 +155,22 @@ main>h2 {
     font-size: 20px;
     font-weight: 800;
     line-height: 2;
+}
+
+/* //////////////////////////////////////////////////////// */
+/* 장바구니 */
+#cart {
+    border: 1px solid black;
+    margin: 0;
+    margin-right: 50px;
+}
+
+.list {
+    display: flex;
+    font-size: 20px;
+
+}
+
+.list>img {
+    width: 100px;
 }
