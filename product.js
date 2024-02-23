@@ -19,6 +19,7 @@
                 //체크박스 생성
                 const itemCheck = document.createElement('input')
                 itemCheck.type = 'checkbox'
+                itemCheck.min = 0
                 itemContainer.appendChild(itemCheck)
                 //p문자열 생성
                 let newP = document.createElement('p')
@@ -44,7 +45,7 @@
                 let newI = document.createElement('i')
                 let priceText = itemPrice.textContent
                 let price = parseInt(priceText.replace(/[^\d]/g,"")) ||0;
-                newI.textContent =`${price}원`
+                newI.textContent =`${price.toLocaleString()}원`
                 itemContainer.appendChild(newI)
 
                 cart.appendChild(itemContainer);
@@ -58,11 +59,11 @@
             }
         })
     })
-
+// 수량 변동시 재계산
 function recalculate(itemname){
     const item = cartItems[itemName]
     const quantity = parseInt(item.quantityInput.value) || 0;
     const calculatedPrice = item.price*quantity
 
-    item.calculatedPriceElement.textContent = `${calculatedPrice}원`
+    item.calculatedPriceElement.textContent = `${calculatedPrice.toLocaleString()}원`
 }
